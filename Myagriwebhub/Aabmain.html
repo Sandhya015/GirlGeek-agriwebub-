@@ -1,0 +1,325 @@
+<html>
+
+<head>
+    <title>delighted</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+ <link rel="stylesheet" href="./static/css/abstyle.css">
+ <style>
+ 
+.body1 {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height:80vh;
+            background-color: #f0f0f0;
+            overflow: hidden;
+        }
+
+        #container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            border-radius: 50%;
+        }
+
+        .industry-block {
+            width: 100px;
+            height: 100px;
+            border-radius: 60%;
+            background-size:cover;
+            background-position: center;
+            margin: 2px;
+            transition: transform 0.3s, opacity 0.3s;
+            cursor: pointer;
+            position:relative;
+            overflow: hidden;
+        }
+
+        
+        .industry-block:hover {
+            transform: scale(1.1);
+            opacity: 0.7;
+        }
+
+        .industry-name {
+            text-align:center;
+            margin-top: 0px; 
+            font-weight:normal;
+            white-space: nowrap;
+            padding:0.1px;
+        }
+
+        .marquee {
+           
+            width: 100%;
+            overflow: hidden;
+            white-space: nowrap;
+            background-color: #3498db; 
+        }
+
+        .marquee span {
+            display: inline-block;
+            padding-left: 100%;
+            animation: marquee 15s linear infinite;
+        }
+
+        @keyframes marquee {
+            to {
+                transform: translateX(-100%);
+            }
+        }
+        .top{
+            background-color: rgb(17, 12, 77);
+        }
+
+        body {
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+button {
+    padding: 5px 5px;
+    font-size: 16px;
+    cursor: pointer;
+    margin: 10px;
+    width: 120px;
+    height: 35px;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.4);
+}
+
+.modal-content{
+    background-color: #fefefe;
+    margin: 1% auto;
+    padding:1px;
+    border: 1px solid #888;
+    width: 80%;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+#contactButton {
+      padding: 10px 20px;
+      background-color: #4CAF50;
+      color: white; 
+      border: none; 
+      border-radius: 5px; /* Add border radius */
+      cursor: pointer;
+      padding: 2px;
+      transition: background-color 0.3s;
+       /* Add transition for smooth color change */
+    }
+
+    /* Hover effect */
+    #contactButton:hover {
+      background-color: #45a049; /* Darker green color on hover */
+    }
+
+</style>
+</head>
+    
+<body> 
+    <header>
+       
+        <img src="./static/images/logo2.jpg" alt="Logo" class="logo">
+  
+  <div class="menu-bar">
+   
+    <ul>
+        <li><a href="Aahome.html"><b>Home </b></a></li>
+        <li onclick="displayabout()"><b>About Us</b></li>
+        <li><a href="Aamarketing.html"><b>Marketing price</b></a></li>
+        <li><a href="Aaseller1.html"><b>Seller</b></a></li>
+        <li><a href="Abuyer.html"><b>Buyer</b></a></li>
+        <!-- <li><a href="box.html"><b>Contact</b></a></li> -->
+        <li><a href="https://forms.gle/y7eK9eCgaytENQTZ8"><b>Feedback</b></a></li>
+    </ul>
+</div>
+</header>
+
+<div class="image">
+  <div class="about" id="about">
+    <div class="container">
+      <h3 ALIGN="CENTER"><b>KNOW MORE ABOUT US</b></h3>
+      <p style="color: rgb(255, 255, 255);"><b>Welcome to Agriwebhub!!!</b><br>Your Ultimate Resource for Global Agricultural Price Information!
+
+        At Agriwebhub, we are passionate about supporting farmers and agricultural stakeholders in making informed decisions that can positively impact their livelihoods. Our mission is simple yet powerful<br> 
+        
+       <b style="color: rgb(199, 11, 26);"> Why to Choose Agriwebhub?</b><br>
+        
+       <b> Global Price Insights:</b><br> &ensp; &ensp; &ensp; &ensp;&ensp; &ensp; &ensp; &ensp;With Agriwebhub, you can easily access up-to-the-minute data on agricultural prices from around the world. We compile data from various sources and present it in an easy-to-understand format, ensuring that you have the most accurate and relevant information at your fingertips.<br>
+        
+        We understand that different crops have different market dynamics. That's why we offer detailed information on a wide range of crops, allowing you to track prices for the products that matter most to you.<br>
+        
+        </p>
+    </div>
+  </div>
+</div>
+<div class="top">
+<h3 align="center" style="color:white ;">OUR TOP COLLABORATION</h3>
+</div>
+<div class="body1">
+    
+<div id="container">
+       
+        <div class="industry-block" style="background-image: url('./static/images/i3.jpg');">
+            <div class="industry-name"></div>
+        </div>
+        <div class="industry-block" style="background-image: url('./static/images/i4.jpg');">
+            <div class="industry-name"></div>
+        </div>
+        <div class="industry-block" style="background-image: url('./static/images/i5.jpg');">
+            <div class="industry-name"></div>
+        </div>
+        <div class="industry-block" style="background-image: url('./static/images/i7.jpg');">
+            <div class="industry-name"></div>
+        </div>
+        <div class="industry-block" style="background-image: url('./static/images/i8.jpg');">
+            <div class="industry-name"></div>
+        </div>
+        <div class="industry-block" style="background-image: url('./static/images/i9.jpg');">
+            <div class="industry-name"></div>
+        </div>
+
+        
+        <div class="industry-block" style="background-image: url('./static/images/i12.jpg');">
+            <div class="industry-name"></div>
+        </div>
+        <div class="industry-block" style="background-image: url('./static/images/i11.jpg');">
+            <div class="industry-name"></div>
+        </div>
+        <div class="industry-block" style="background-image: url('./static/images/b4.jpg');">
+            <div class="industry-name"></div>
+        </div>
+        <div class="industry-block" style="background-image: url('./static/images/b3.jpg');">
+            <div class="industry-name"></div>
+        </div>
+        <div class="industry-block" style="background-image: url('./static/images/b5.jpg');">
+            <div class="industry-name"></div>
+        </div>
+        <div class="industry-block" style="background-image: url('./static/images/b6.jpg');">
+            <div class="industry-name"></div>
+        </div>
+    </div>
+</div>
+
+
+    <div class="marquee">
+        <span>
+            "Farming: where every seed is a possibility, every sunrise is a new beginning, and every harvest is a testament to patience and hard work."
+        </span>
+    </div>
+
+<div class="format"> 
+  <div class="head">
+  <h3 ALIGN="CENTER" style="color: rgb(245, 235, 244);"><b>MARKETING ANALYTICS</b></h3>
+</div>
+  <div class="graph1">
+    <img src="./static/images/graph1.png" alt="" width="3500"><br><pre></pre>
+    <p><b>Analyzing the marketing dynamics of selling and buying prices of farmers' crops in 2015 is essential to understand the challenges and opportunities that agricultural communities faced during that period. In 2015, the agricultural sector was characterized by a complex web of factors that influenced both the selling and buying prices of crops.In conclusion, the marketing analysis of selling and buying prices of farmers' crops in 2015 reflects a complex and dynamic landscape shaped by supply and demand factors, government policies, international trade dynamics, technological advancements, and local market conditions</b></p>
+  </div>
+  <HR size="3" width="1600" align="CENTER" color="black">
+<div class="graph2">
+  <img src="./static/images/graph3.png" alt="" width="430" height="500">
+  <p><b>Analyzing the marketing dynamics of selling and buying prices of farmers' crops in 2015 is essential to understand the challenges and opportunities that agricultural communities faced during that period. In 2015, the agricultural sector was characterized by a complex web of factors that influenced both the selling and buying prices of crops.In essence, yield marketing in agriculture is a comprehensive and strategic approach that combines modern technologies, sustainable practices, and market knowledge to optimize agricultural output. By focusing on maximizing yields while also considering environmental and economic factors, farmers and agricultural businesses can work towards long-term success in a highly competitive and ever-changing industry.<br><br><br>Maximizing yield isn't just about what happens in the field but also involves proper post-harvest handling and storage. Efficient storage and preservation methods help reduce post-harvest losses and maintain the quality of agricultural products, ensuring that farmers can command better prices in the market.n essence, yield marketing in agriculture is a comprehensive and strategic approach that combines modern technologies, sustainable practices, and market knowledge to optimize agricultural output.</b> </p>
+</div>
+</div>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Play&display=swap" rel="stylesheet"> 
+</head>
+<body>
+<footer>
+<div class="footer">
+<div class="row">
+<a href="style.css"><i class="fa fa-facebook"></i></a>
+<a href="style.css"><i class="fa fa-instagram"></i></a>
+<a href="style.css"><i class="fa fa-youtube"></i></a>
+<a href="style.css"><i class="fa fa-twitter"></i></a>
+</div>
+
+<div class="row">
+<ul>
+
+<!-- <li><a href="#">Contact Us</a></li> -->
+<li><a href="Aaservice.html">Our Services</a></li>
+<li><a href="#">Privacy Policy</a></li>
+<li><a href="#">Terms & Conditions</a></li>
+<!-- <li><a href="#">Career</a></li> -->
+</ul>
+</div>
+
+<button id="contactButton">Contact</button>
+
+<div id="contactModal" class="modal">
+    <div class="modal-content">
+        <span class="close" id="closeButton">&times;</span>
+        <h2>Contact Details</h2><br><p>Sandhya(CEO)<br>Email:sandhyanaik3249@gmail.com<br>Phone:8431556194</p>
+        <p>Shahid<br>Email:shahid123@gmail.com<br>Phone:9480441589</p>
+        <p>Salman<br>Email:salman1234@gmail.com<br>Phone:8277515389</p>
+    </div>
+</div>
+
+<div class="row">
+ <p align="center" style="color:rgb(7, 91, 15);"> &copy;Agriwebhub all rights preserved</p>
+</div>
+</div>
+</footer>
+<script>
+function displayabout(){
+  let about=document.getElementById('about');
+  if(about.style.display=='none'){
+    about.style.display='block'
+  }
+  else
+  about.style.display='none';
+
+}
+
+document.getElementById("contactButton").addEventListener("click", function() {
+    document.getElementById("contactModal").style.display = "block";
+});
+
+document.getElementById("closeButton").addEventListener("click", function() {
+    document.getElementById("contactModal").style.display = "none";
+});
+
+window.addEventListener("click", function(event) {
+    if (event.target === document.getElementById("contactModal")) {
+        document.getElementById("contactModal").style.display = "none";
+    }
+});
+
+
+
+
+</script>
+
+</body>
+<html>
